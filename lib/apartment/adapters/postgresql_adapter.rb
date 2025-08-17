@@ -149,7 +149,8 @@ module Apartment
         /CREATE SCHEMA/i,
         /COMMENT ON SCHEMA/i,
         /SET transaction_timeout/i,                   # new in postgresql 17
-
+        /\\restrict/i,                                # new in postgresql 17.6
+        /\\unrestrict/i,                              # new in postgresql 17.6
       ].freeze
 
       def import_database_schema
